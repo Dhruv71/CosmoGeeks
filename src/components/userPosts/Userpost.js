@@ -6,7 +6,7 @@ import DP from '../userProfile/assets/dp.png';
 import LikeIcon from './assest/like.svg'
 import languages from './assest/language'
 import axios from 'axios'
-
+import DefaultBG from '../userProfile/assets/banner.png'
 Modal.setAppElement("#root");
 
 class UserPost extends React.Component  {
@@ -20,25 +20,25 @@ class UserPost extends React.Component  {
 
   setmodalIsOpen = val => this.setState({modalIsOpen : val})
 
-   b64 = new Buffer.from(this.props.bgImg).toString("base64");
-    
+  
   onSelectChange = async e => {
     
     this.setState({selectedLang : e.target.value})
- try {
-  const res = await axios.get(`https://cosmogeeks-api.herokuapp.com/posts/translate/${this.props.postId}?target=${e.target.value}`,
-               {withCredentials:true}) 
-  console.log(res.data) 
-  if(res.data){
-    this.setState({translated : res.data.desc.translation, tTitle : res.data.title.translation})
+    try {
+      const res = await axios.get(`https://cosmogeeks-api.herokuapp.com/posts/translate/${this.props.postId}?target=${e.target.value}`,
+      {withCredentials:true}) 
+      console.log(res.data) 
+      if(res.data){
+        this.setState({translated : res.data.desc.translation, tTitle : res.data.title.translation})
+      }
+    } catch (error) {
+      console.log(error)
+    }
+    
+    
   }
- } catch (error) {
-   console.log(error)
- }
- 
-
-  }
-render(){
+  render(){
+  const b64 = this.props.bgImg ? new Buffer.from(this.props.bgImg).toString("base64") : null ;
   const dp = this.props.avatar.data ? new Buffer.from(this.props.avatar.data).toString("base64") : this.props.avatar
   return (
     <div className="User-Post">
@@ -54,7 +54,12 @@ render(){
           <div className="post-username">{this.props.uname}</div>
         </div>
         <div className="post-image">
-          <img src={`data:image/png;base64,${this.b64}`} alt="img" />
+          {
+            b64 ?
+            <img src={`data:image/png;base64,${this.b64}`} alt="img" />
+            :<img src={DefaultBG} alt="default BackGround" />
+
+          }
         </div>
 
         <h2 className="post-title">{this.props.title}</h2>

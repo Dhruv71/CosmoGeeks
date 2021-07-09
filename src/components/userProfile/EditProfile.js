@@ -9,7 +9,6 @@ import { fetchUser, tryEditProfile } from '../../actions'
 class EditProfile extends React.Component {
 
   componentDidMount(){
-    console.log("in Mount")
     this.props.fetchUser()
   }
 
@@ -27,7 +26,6 @@ class EditProfile extends React.Component {
   handleChange = (event, input) => {
     event.preventDefault();
     let imageFile = event.target.files[0];
-    console.log(imageFile)
     if (imageFile) {
       const localImageUrl = URL.createObjectURL(imageFile);
       const imageObject = new window.Image();

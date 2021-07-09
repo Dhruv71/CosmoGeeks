@@ -75,10 +75,10 @@ onDeleteClick= async id => {
 
         <div className="UsersPosts">
         {!_.isEmpty(posts) ? Object.values(posts).map(post => <UserPost title={post.title} description={post.description} 
-             bgImg={post.bgImg.data} postId={post._id} userProfile="profile" onEditClick={this.onEditClick} 
+             bgImg={post.bgImg ? post.bgImg.data : null} postId={post._id} userProfile="profile" onEditClick={this.onEditClick} 
              onDeleteClick={this.onDeleteClick} key={post._id} uname={this.props.user.name}
              avatar = {this.props.user.avatar}/>)
-             : <h2>Fetching the User Posts.....</h2>}
+             :   <h2>Fetching Your Data....</h2>} 
         </div>
 
         </div>  
