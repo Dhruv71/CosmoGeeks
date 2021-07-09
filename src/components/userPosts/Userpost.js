@@ -125,7 +125,7 @@ class UserPost extends React.Component  {
           >
             <div className="post-owner-big">
             <div>
-          { _.isEmpty(dp) ?
+          { !_.isEmpty(dp) ?
             <img className="post-user-image" src={`data:image/png;base64,${dp}`} alt="profile" /> :
             <img className="post-user-image" src={DP} alt="profile" />
           }  
