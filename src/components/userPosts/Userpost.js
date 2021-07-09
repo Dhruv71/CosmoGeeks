@@ -27,7 +27,6 @@ class UserPost extends React.Component  {
     try {
       const res = await axios.get(`https://cosmogeeks-api.herokuapp.com/posts/translate/${this.props.postId}?target=${e.target.value}`,
       {withCredentials:true}) 
-      console.log(res.data) 
       if(res.data){
         this.setState({translated : res.data.desc.translation, tTitle : res.data.title.translation})
       }
@@ -140,15 +139,19 @@ class UserPost extends React.Component  {
           </div>
           <div className="post-username">{this.props.uname}</div>
             </div>
+           {
+             b64 ? 
+             <img
+             src={`data:image/png;base64,${b64}`}
+             alt=""
+             className="post-image-big"
+             height="350px"
+             width="950px"
+           />
+           : <img src={DefaultBG} alt="default BackGround" />
 
-            <img
-              src={`data:image/png;base64,${this.b64}`}
-              alt=""
-              className="post-image-big"
-              height="350px"
-              width="950px"
-            />
-
+           }
+            
             <h2 className="post-title-big">{this.state.tTitle ? this.state.tTitle : this.props.title}</h2>
             <div className="post-discription-big">{this.state.translated ?
                 parse(this.state.translated) : parse(this.props.description)}</div>
