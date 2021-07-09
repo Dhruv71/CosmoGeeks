@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from "react-router-dom";
 import './profile.css';
-
 import UserPost from '../userPosts/Userpost';
 import UserHeader from './UserProfileHeader';
 import Banner from './assets/banner.png';
@@ -39,7 +38,8 @@ onDeleteClick= async id => {
                 <li className="menu-option">Account</li>
                 <li className="menu-option">Privacy setting</li>
                 <li className="menu-option">Share Profile</li>
-
+                <li className="menu-option" onClick={() => this.props.history.push('/jobs')}>View Jobs</li>
+                
               </div>
 
         </div>
@@ -77,7 +77,7 @@ onDeleteClick= async id => {
         {!_.isEmpty(posts) ? Object.values(posts).map(post => <UserPost title={post.title} description={post.description} 
              bgImg={post.bgImg ? post.bgImg.data : null} postId={post._id} userProfile="profile" onEditClick={this.onEditClick} 
              onDeleteClick={this.onDeleteClick} key={post._id} uname={this.props.user.name}
-             avatar = {this.props.user.avatar}/>)
+             avatar = {this.props.user.avatar ? this.props.user.avatar : {} }/>)
              :   <h2>Fetching Your Data....</h2>} 
         </div>
 

@@ -4,9 +4,10 @@ import "./userpost.css";
 import parse from "html-react-parser";
 import DP from '../userProfile/assets/dp.png';
 import LikeIcon from './assest/like.svg'
+import _ from "lodash";
 import languages from './assest/language'
 import axios from 'axios'
-import DefaultBG from '../userProfile/assets/banner.png'
+
 Modal.setAppElement("#root");
 
 class UserPost extends React.Component  {
@@ -19,8 +20,9 @@ class UserPost extends React.Component  {
   }
 
   setmodalIsOpen = val => this.setState({modalIsOpen : val})
-
   
+  b64 =  new Buffer.from(this.props.bgImg).toString("base64");
+
   onSelectChange = async e => {
     
     this.setState({selectedLang : e.target.value})
@@ -33,18 +35,15 @@ class UserPost extends React.Component  {
     } catch (error) {
       console.log(error)
     }
-    
-    
   }
   render(){
-  const b64 = this.props.bgImg ? new Buffer.from(this.props.bgImg).toString("base64") : null ;
   const dp = this.props.avatar.data ? new Buffer.from(this.props.avatar.data).toString("base64") : this.props.avatar
   return (
     <div className="User-Post">
       <div className="Post">
         <div className="post-owner">
           <div>
-          { dp?
+          { !_.isEmpty(dp)?
             <img className="post-user-image" src={`data:image/png;base64,${dp}`} alt="profile" /> :
             <img className="post-user-image" src={DP} alt="profile" />
           }  
@@ -53,12 +52,7 @@ class UserPost extends React.Component  {
           <div className="post-username">{this.props.uname}</div>
         </div>
         <div className="post-image">
-          {
-            b64 ?
-            <img src={`data:image/png;base64,${this.b64}`} alt="img" />
-            :<img src={DefaultBG} alt="default BackGround" />
-
-          }
+           <img src={`data:image/png;base64,${this.b64}`} alt="img" />
         </div>
 
         <h2 className="post-title">{this.props.title}</h2>
@@ -139,19 +133,13 @@ class UserPost extends React.Component  {
           </div>
           <div className="post-username">{this.props.uname}</div>
             </div>
-           {
-             b64 ? 
              <img
-             src={`data:image/png;base64,${b64}`}
+             src={`data:image/png;base64,${this.b64}`}
              alt=""
              className="post-image-big"
              height="350px"
              width="950px"
            />
-           : <img src={DefaultBG} alt="default BackGround" />
-
-           }
-            
             <h2 className="post-title-big">{this.state.tTitle ? this.state.tTitle : this.props.title}</h2>
             <div className="post-discription-big">{this.state.translated ?
                 parse(this.state.translated) : parse(this.props.description)}</div>

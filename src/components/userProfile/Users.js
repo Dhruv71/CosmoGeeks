@@ -18,6 +18,7 @@ class Users extends React.Component {
 
   render(){
     const {posts,users} = this.props
+    
   return( 
           <div className="Users-home">
           
@@ -41,7 +42,7 @@ class Users extends React.Component {
             
           <div className="UsersPosts">
              {!_.isEmpty(posts) ? Object.values(posts).map(post =>  <UserPost title={post.title} description={post.description} 
-                bgImg={post.bgImg ? post.bgImg.data : null} postId={post._id} avatar={users[post.owner] ? users[post.owner].avatar : {} } uname={users[post.owner] ? users[post.owner].name : null}
+                bgImg={post.bgImg ? post.bgImg.data : null} postId={post._id} avatar={users[post.owner] ?  users[post.owner].avatar ? users[post.owner].avatar : {} : {} } uname={users[post.owner] ? users[post.owner].name : null}
                key={post._id}/> ) : 
                <Loader
                type="Puff"
