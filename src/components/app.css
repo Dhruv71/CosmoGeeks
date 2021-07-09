@@ -1,0 +1,16 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    justify-content: center;
+}
+
+html{
+    font-size: 62.5%;
+  }
+
+@media only screen and (max-width : 768px){
+    html{
+        font-size : 45%
+    }
+}

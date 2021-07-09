@@ -1,0 +1,32 @@
+.Verify-page{
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    margin-top: 10rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+.VerifyMessg-Container{
+    margin: auto;
+    padding: 2rem;
+    height: 50rem;
+    width: 70rem;
+    background-color: #ffffff;
+    box-shadow: 0rem .1rem 2.5rem #E3E3E3;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.VerifyMessg-Container h2{
+    font-size: 2.4rem;
+}
+.VerifyMessg-Container p{
+    font-size: 1.6rem;
+}
+.VerifyMessg-Container h3{
+     font-size: 1.87rem;
+}
+.proceding{
+    margin-top: 6rem;
+}

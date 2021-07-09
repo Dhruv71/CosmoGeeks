@@ -1,0 +1,47 @@
+
+.cards{
+    width: 41rem;
+    height: 55rem;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    box-shadow: 0rem .1rem 2rem #E3E3E3;
+    border: 1px solid #D2D2D2;
+    margin-top: 6rem;
+    border-radius: 1rem; 
+    justify-content: center;
+    transition: 0.2s;
+    font-family: 'Poppins', sans-serif;
+}
+
+@keyframes float {
+    0% {
+       transform: translatey(0rem);
+    }
+    50% {
+       transform: translatey(-.5rem);
+    }
+    100% {
+       transform: translatey(0rem);
+    }
+ }
+ 
+ .cards:hover{
+    animation: float 1.5s ease-in-out infinite;
+    transition: 0.09s;
+ }
+
+ .job-titles{
+     font-size: 2.5rem;
+     text-align: center;
+     margin-bottom: 2rem;
+     text-transform: capitalize;
+     font-weight: bold;
+ }
+
+ .cards>h3{
+     font-size: 1.8rem;
+     font-weight: 500;
+     margin-top: 2rem;
+     padding: 0.2rem 3rem 0.2rem 3rem;
+ }

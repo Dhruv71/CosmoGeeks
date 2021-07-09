@@ -1,0 +1,29 @@
+.search input{
+    width: 44.6rem;
+    height: 5.6rem;
+    border-radius: 1rem;
+    outline: none;
+    background-color: #E6E6E6;
+    margin: 1.8rem;
+    border: 0;
+    text-indent: 2.9rem;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.8rem;
+}
+
+.custom-input.error{
+    border: red .2rem solid;
+    background-color: rgb(255, 231, 231);
+}
+
+::placeholder{
+    opacity: 1;
+    font-family: 'Poppins', sans-serif;
+}
+
+.search input :focus {
+    outline: none;
+    border: none;
+}
+
+/*C:/Users/Kaval/mongodb/bin/mongod.exe --dbpath=C:/Users/Kaval/mongodb-data*/

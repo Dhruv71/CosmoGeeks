@@ -1,0 +1,25 @@
+.options-container{
+    margin-top: 500px;
+    width: 950px;
+    height: 65px;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto;
+    grid-column-gap: 90px;
+    margin: auto;
+    border: 1px solid var(--unnamed-color-d2d2d2);
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 1px 10px #00000017;
+    border: 1px solid #D2D2D2;
+    border-radius: 10px;
+    margin-top: 36px;
+    font-family: poppins;
+}
+
+.feeds, .explore, .groups, .profile{
+    padding: 12px;
+}
+
+.user-line{
+    border-left: 1.2px solid #D2D2D2;
+    height: 65px;
+}

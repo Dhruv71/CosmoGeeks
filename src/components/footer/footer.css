@@ -1,0 +1,103 @@
+.footer{
+    width: 100%;
+    height: 31rem;
+    background-color: #110942;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+.footer-content{
+    height: 70%;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 5rem;
+    grid-column-gap: 20rem;
+}
+
+.footer-logo{
+    font-size: 4.2rem;
+    font-weight: 700;
+    text-align: center;
+    justify-content: center;
+}
+
+.footer-icon-container{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-column-gap: 2rem;
+    margin-top: 2rem;
+}
+
+.footer-quick-link{
+    margin-top: 2rem;
+}
+
+.footer-quick-link-list{
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    text-align: left;
+    grid-column-gap: 5rem;
+    grid-row-gap: 2rem;
+}
+
+.footer-quick-link h3{
+     font-size: 1.8rem;
+}
+.grid_option{
+  font-size: 1.8rem;
+}
+
+
+/*-----------------Media Query------------------*/
+@media only screen and (max-width: 600px) {
+   
+    .footer{
+        width: 100%;
+        height: 40rem;
+        background-color: #110942;
+        color: white;
+    }
+    
+    .footer-content{
+        display: flex;
+        flex-wrap: wrap;
+        font-size: 30px;
+        gap: 22px;
+    }
+
+    .footer-logo{
+        font-size: 4.8rem;
+    }
+
+    .footer-quick-link-list{
+        grid-column-gap: 8rem;
+    }
+
+}
+
+@media only screen and (max-width : 768px){
+  
+    .footer{
+        width: 100%;
+        height: 40rem;
+        background-color: #110942;
+        color: white;
+    }
+    
+
+    .footer-content{
+        display: flex;
+        flex-wrap: wrap;
+        font-size: 30px;
+        gap: 22px;
+    }
+
+    .footer-logo{
+        font-size: 4.8rem;
+    }
+
+    .footer-quick-link-list{
+        grid-column-gap: 8rem;
+    }
+}

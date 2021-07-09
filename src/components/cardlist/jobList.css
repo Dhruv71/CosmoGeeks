@@ -1,0 +1,36 @@
+.job-sections{
+    min-height: 100vw;
+    margin: 2rem auto;
+}
+
+.job-catagory{
+    width: 85%;
+    font-family: 'Poppins', sans-serif;
+    text-align: left;
+    margin-left: 10rem;
+    margin-bottom: 10rem;
+}
+
+.job-domain{
+    font-size: 3.6rem;
+    font-weight: 700;
+}
+
+.job-descriptions{
+    font-size: 1.6rem;
+    font-weight: 500;
+    margin-top: 2rem;
+}
+
+.job-education{
+    font-size: 1.6rem;
+    font-weight: 500;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+.job-list{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 1rem;
+}

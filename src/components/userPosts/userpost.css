@@ -1,0 +1,254 @@
+.User-Post{
+    margin-top: 25px;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 2rem;
+}
+
+.Post{
+    width: 950px;
+    height: 750px;
+    border-radius: 8px;
+    background: var(--unnamed-color-ffffff) 0% 0% no-repeat padding-box;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 2px 40px #dddddd;
+}
+
+.post-owner{
+    width: 100%;
+    height: 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-left: 3rem;
+}
+
+.post-owner-big{
+    width: 100%;
+    height: 8rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-left: 2rem;
+}
+
+.post-user-image{
+    width: 5rem;
+    height: 5rem;
+    background-color: #4E2098;
+    border-radius: 5rem;
+}
+
+.post-username{
+    color: black;
+    font-weight: 600;
+    font-size: 1.8rem;
+    margin-left: 2rem;
+}
+
+.ReactModal__Body--open,.ReactModel__Html--open{overflow:hidden;}
+.post-image{
+   
+    overflow: hidden;
+    position: relative;
+}
+.post-image img{
+    width: 95rem;
+    height: 35rem;
+}
+
+.post-title{
+ margin-left: 25px;
+ margin-top: 15px;
+ font-size: 24px;
+ text-transform: capitalize;
+}
+
+.post-discription{
+    margin: 10px 0 0 25px;
+    font-size: 13px;
+    line-height: 22px;
+    width: 870px;
+    height: 11rem;
+    overflow: hidden;
+
+}
+
+.post-line{
+    margin-top: 2rem;
+    width: 95rem;
+    height: 0px;
+    border: 0.25px solid #D2D2D2;
+    opacity: 1;
+}
+
+.post-bottom-part{
+    margin-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 95rem;
+}
+
+.post-like-share{
+   width: 15rem;
+   height: 2.5rem;
+   margin-left: 2rem;
+   display: flex;
+   align-items: center;
+   cursor: pointer;
+}
+
+.post-like-share > h2{
+    display: inline-block;
+    margin-left: 1rem;
+    font-weight: 600;
+    font-size: 1.8rem;
+}
+
+.post-button{
+    width: 15rem;
+    height: 5rem;
+    margin: 0 5px;
+    border-radius: 1rem;
+    background-color:  #4E2098;
+    color: #ffffff;
+    border: none;
+    font-size: 1.6rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+    font-family: 'poppins', sans-serif;
+    
+}
+
+.post-button-edit{
+    width: 15rem;
+    height: 5rem;
+    border-radius: 1rem;
+    outline: none;
+    background-color: transparent;
+    color: #4E2098;
+    border: .2rem solid #4E2098;
+    font-size: 1.6rem;
+    font-weight: 600;
+    cursor: pointer;   
+    transition: 0.2s;
+    margin-right: 1rem;
+    font-family: 'poppins', sans-serif;
+}
+
+.post-button-edit:hover{
+    background-color: #E4D6FB;
+    color:#4E2098;
+    border: .2rem solid #E4D6FB;
+}
+
+.post-button-red{
+    width: 15rem;
+    height: 5rem;
+    margin: 0 5px;
+    border-radius: 1rem;
+    background-color:  #d31736;
+    color: #ffffff;
+    border: none;
+    font-size: 1.6rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+    margin-right: 1rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+.post-button-red:hover{
+    background-color: transparent;
+    border: .2rem solid #d31736;
+    color: #d31736;
+}
+
+.post-buttons{
+    margin-right: 3rem;
+}
+
+.post-button:hover{
+    background-color: transparent;
+    border: .2rem solid #4E2098;
+    color: #4E2098;
+}
+.post-button-red:hover{
+    background-color: transparent;
+    border: .2rem solid #d31736;
+    color: #d31736;
+}
+
+.post-full-size{
+    width: 1005px;
+    margin: 2rem auto;
+    height: 65rem;
+    border: none;
+    font-family: 'Poppins', sans-serif; 
+}
+
+.post-image-big{
+    border-radius: 8px;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.post-title-big{
+ width: 100%;   
+ margin-left: 15px;
+ margin-top: 15px;
+ font-size: 3rem;
+}
+
+.post-discription-big{ 
+    width: 100%;
+    margin: 10px 0 0 15px;
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+    width: 870px;
+}
+
+.post-line-big{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 950px;
+    height: 0px;
+    border: 0.25px solid #D2D2D2;
+    opacity: 1;
+}
+
+.post-bottom-part-big{
+    width: 96rem;
+    height: 8rem;
+    margin-top: 12px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+
+.close-button{
+    width: 15rem;
+    height: 5rem;
+    border-radius: 1rem;
+    background-color:  #4E2098;
+    color: #ffffff;
+    border: none;
+    font-size: 1.6rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+    margin-right: 1.4rem;
+
+}
+
+.close-button:hover{
+    background-color: transparent;
+    border: .2rem solid #4E2098;
+    color: #4E2098;
+}

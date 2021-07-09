@@ -1,0 +1,10 @@
+.Text-Field{
+    width: 1000px;
+    padding: 2rem;
+    height: 100vmax;
+    margin: 4rem auto;
+    background: var(--unnamed-color-ffffff) 0% 0% no-repeat padding-box;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 2px 40px #dddddd;
+    border-radius: 1rem;
+}

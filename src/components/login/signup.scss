@@ -1,0 +1,188 @@
+.signup{
+    width: 100%;
+    height: 100.8rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+.signup-patternimage{
+    height: 100.8rem;
+    background-image: url('./pattern.svg');
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    justify-content: center;
+}
+
+.signup-container{
+    width: 54rem;
+    height: 78rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: -92rem auto 70rem auto;
+    background-color: #FFFFFF;
+    box-shadow: 0rem .1rem 2.5rem #E3E3E3;
+    border-radius: 1rem;  
+ }
+
+ .form_data{
+     margin-top: 2rem;
+ }
+ 
+.signup-submit{
+    width: 44.6rem;
+    height: 5.6rem;
+    border-radius: 1rem;
+    outline: none;
+    background-color: #4E2098;
+    color: white;
+    font-size: 1.8rem;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    margin-top: 3rem;
+    transition: 0.2s;
+    font-family: 'Poppins', sans-serif;
+}
+
+.signup-submit:hover{
+    background-color: #5a2aa7;
+}
+
+.signup-title{
+    font-size: 2rem;
+    font-weight: 700;
+    color: #110942;
+}
+
+.signup-line{
+    font-weight: 500;
+    width: 9.6rem;
+    color: #4E2098;
+    border: .2rem solid #4E2098;
+    margin: 1rem auto;
+    border-radius: 1rem;
+}
+
+.signup-redirect{
+    font-size: 1.5rem;
+    margin-top: 4rem;
+}
+
+.form_data>input[type=text], select {
+   font-size: 2rem;
+   background-color: #E3E3E3;
+   display: inline-block;
+}
+
+.form_data>input[type=number], select {
+    font-size: 2rem;
+    background-color: #E3E3E3;
+    display: inline-block;
+ }
+ .form_data>input[type=email], select {
+  font-size: 2rem;
+  background-color: #E3E3E3;
+  display: inline-block;
+}
+.form_data>input[type=password], select {
+    font-size: 2rem;
+    background-color: #E3E3E3;
+    display: inline-block;
+ }
+
+::placeholder{
+    font-weight: 500;
+    color : #858585;
+    font-size: 1.8rem;
+}
+
+spam{
+    margin-top: 3.5rem;
+}
+
+u{
+    color: #4E2098;
+}
+
+u:hover{
+    cursor: pointer;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+/*Error mssg*/
+.error-mssg{
+  color: red;
+  font-size: 1.4rem;
+  text-align: left;
+  margin-left: 5.5rem;
+}
+
+/*loading animate*/
+
+$color: #ffffff3d, #ffffffb0, #ffffff, #ffffff, #ffffff3d; 
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+$circle-size: 1.0rem;
+$circle-margin: .8rem; 
+
+.circle {
+  width: $circle-size;
+  height: $circle-size;
+  border-radius: 50%;
+  margin: $circle-margin;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:before {
+    content: "";
+    width: $circle-size;
+    height: $circle-size;
+    border-radius: 50%;
+    opacity: 0.7;
+    animation: scale 1.5s infinite 
+      cubic-bezier(0, 0, 0.49, 1.02);
+  }
+}
+
+@for $i from 1 through 5 {
+  .circle-#{$i} {
+    background-color: nth($color, $i);
+    &:before {
+      background-color: nth($color, $i);
+      animation-delay: 200ms * $i;
+    }
+  }
+}
+
+@keyframes scale {
+  0% {
+    transform: scale(1);
+  }
+  50%, 75% {
+    transform: scale(2);
+  }
+  78%, 100% {
+    opacity: 0;
+  }
+}

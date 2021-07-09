@@ -1,0 +1,19 @@
+.Edit-container{
+    width: 100%;
+    min-height: 38vw;
+    font-family: 'poppins', sans-serif;
+}
+
+.edit_form_data{
+    width: 50rem;
+    margin: 10rem auto;
+    text-align: center;
+}
+
+.edit_form_data>h3{
+    text-align: left;
+    margin-left: 4rem;
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+

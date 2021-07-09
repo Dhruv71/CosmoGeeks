@@ -1,0 +1,40 @@
+.Resend-verify{
+    width: 100%;
+    height: 70vh;
+    text-align: center;
+    margin-top: 12rem;
+    font-family: 'Poppins', sans-serif;
+}
+.Resend-title{
+    font-size: 2.5rem;
+}
+.Resend-bodycopy{
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+}
+
+.Resend-button{
+    width: 44.6rem;
+    height: 5.6rem;
+    border-radius: 1rem;
+    outline: none;
+    background-color: #4E2098;
+    color: white;
+    font-size: 1.8rem;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    margin-top: 3rem;
+    transition: 0.2s;
+}
+
+.Resend-button:hover{
+    background-color: #5a2aa7;
+}
+
+.Resendmail-error-mssg{
+    margin-top: 1rem;
+    color: red;
+    font-size: 1.4rem;
+}

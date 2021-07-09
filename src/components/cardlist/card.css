@@ -1,0 +1,70 @@
+.card-item{
+   width: 36rem;
+   height: 40rem;
+   display: flex;
+   flex-direction: column;
+   background-color: white;
+   box-shadow: 0rem .1rem 2.5rem #E3E3E3;
+   text-align: center;
+   margin-top: 6.5rem;
+   border-radius: 1rem; 
+   justify-content: center;
+   transition: 0.2s;
+   font-family: 'Poppins', sans-serif;
+}
+
+.card-item-logo{
+   margin-top: 2.5rem;
+   text-align: center;
+}
+
+@keyframes float {
+   0% {
+      transform: translatey(0rem);
+   }
+   50% {
+      transform: translatey(-.5rem);
+   }
+   100% {
+      transform: translatey(0rem);
+   }
+}
+
+.card-item:hover{
+   animation: float 2s ease-in-out infinite;
+   transition: 0.2s;
+}
+
+.card-item-description{
+   width : 24rem;
+   margin: 1.5rem auto;
+   font-size: 1.2rem;
+   color: #363636;
+}
+
+.card-item-title{
+   width: 36rem;
+  font-size: 2.4rem;
+  color: #471F8F;
+  margin-top: 4.7rem;
+  margin-bottom: 2.1rem;
+  font-weight: 600;
+}
+
+.card-item.yes{
+    margin-right: 10rem;
+}
+
+/*-----------------Media Query------------------*/
+@media only screen and (max-width: 600px) {
+   .card-item.yes{
+      margin-right: 0rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+   .card-item.yes{
+      margin-right: 0rem;
+  }
+}
+
