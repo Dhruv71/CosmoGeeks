@@ -6,7 +6,7 @@ import { applyMiddleware, compose, createStore} from 'redux';
 import reducers from './reducers/index';
 import App from './components/App';
 
-const composeEnhancers = (process.env.NODE_ENV !== 'production' && window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__) || compose;
+const composeEnhancers = (process.env.NODE_ENV !== 'test' && window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__) || compose;
 const store = createStore(
     reducers,
     composeEnhancers(applyMiddleware(reduxThunk))
